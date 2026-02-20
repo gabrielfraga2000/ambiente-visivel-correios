@@ -100,6 +100,10 @@ O cron está configurado em `vercel.json` para rodar **1x por dia** (compatível
 - Schedule: `0 3 * * *`
 
 > Se você estiver no plano Pro, pode trocar para `*/30 * * * *` e sincronizar a cada 30 minutos.
+O cron já está configurado em `vercel.json` para rodar a cada 30 minutos:
+
+- Path: `/api/sync`
+- Schedule: `*/30 * * * *`
 
 Recomendação: definir `CRON_SECRET` e enviar no header `Authorization: Bearer <CRON_SECRET>` para maior segurança.
 
