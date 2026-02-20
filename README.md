@@ -94,6 +94,12 @@ npx prisma migrate deploy
 
 ## 6) Ativando CRON
 
+O cron está configurado em `vercel.json` para rodar **1x por dia** (compatível com plano Hobby da Vercel):
+
+- Path: `/api/sync`
+- Schedule: `0 3 * * *`
+
+> Se você estiver no plano Pro, pode trocar para `*/30 * * * *` e sincronizar a cada 30 minutos.
 O cron já está configurado em `vercel.json` para rodar a cada 30 minutos:
 
 - Path: `/api/sync`
